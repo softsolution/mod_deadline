@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="windows-1251"?>
+<backend>
+    <module>
+        <id>mod_deadline</id>
+        <title>Обратный отсчет</title>
+    </module>
+    <params>
+        <param type="list" name="mode" title="Режим работы модуля">
+            <option title="1. До конца дня (каждый день сначала)" value="24" />
+            <option title="2. До определенной даты (работа счетчика останавливается по достижении указанной даты)" value="end_date" />
+            <option title="3. Периодическое обнуление счетчика раз в несколько дней (счетчик начинает работу с начала)" value="few_days" />
+        </param>
+        <param type="string" name="end_date_value" title="Дата завершения" hint="Для режима №2. Формат даты: день.месяц.год(4 цифры). Например, 03.10.2012" default="00.00.0000" />
+        <param type="number" name="period" title="Период дней" hint="Для режима №3. К дате старта будет периодически добавляться это количество дней" units="дн." default="1" />
+        <param type="string" name="start_date_value" title="Дата старта акции" hint="Для режима №3. Формат даты: день.месяц.год(4 цифры). Например, 03.10.2012" default="00.00.0000" />
+        <param type="number" name="diff" title="Разница с сервером" hint="Для корректировки значений. Положительные значения без +, отрицательные со знаком -" units="час." default="0" />
+    </params>
+</backend>
